@@ -11,8 +11,10 @@ Equipe
 - Neyde Karen.
 
 -------------
+-------------
 
---Dicas
+Dicas
+-------------
 
 Instalação
 -------------
