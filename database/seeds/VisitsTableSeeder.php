@@ -12,6 +12,6 @@ class VisitsTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(Visit::class, 100)->create();
+        factory(Visit::class, 500)->create();
     }
 }

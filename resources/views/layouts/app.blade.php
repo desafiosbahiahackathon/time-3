@@ -8,6 +8,7 @@
     <title>Redesigned Couscous</title>
 
     <!-- Styles -->
+    <link href="http://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css" rel="stylesheet">
     <link href="{{ URL::asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ URL::asset('css/gaintime.min.css') }}" rel="stylesheet">
 
@@ -21,23 +22,24 @@
            </a>
        </div>
 
-       <div class="btn dropdown-right">
+       <div class="btn clean dropdown-right">
            <span>Efetivo</span>
            <ul>
                 <li><a href="{{ URL::action('UserController@index') }}"><i class="fa fa-btn fa-plus"></i>Listagem</a></li>
                 <li><a href="{{ URL::action('UserController@create') }}"><i class="fa fa-btn fa-plus"></i>Registrar</a></li>
            </ul>
        </div>
-       <div class="btn dropdown-right">
+       <div class="btn clean dropdown-right">
            <span>Assistidas</span>
            <ul>
                 <li><a href="{{ URL::action('WomanController@index') }}"><i class="fa fa-btn fa-plus"></i>Listagem</a></li>
                 <li><a href="{{ URL::action('WomanController@create') }}"><i class="fa fa-btn fa-plus"></i>Registrar</a></li>
            </ul>
        </div>
-       <div class="btn dropdown-right">
+       <div class="btn clean dropdown-right">
            <span>Visitas</span>
            <ul>
+                <li><a href="{{ URL::action('VisitController@dailyVisits') }}"><i class="fa fa-btn fa-plus"></i>Visitas do dia</a></li>
                 <li><a href="{{ URL::action('VisitController@index') }}"><i class="fa fa-btn fa-plus"></i>Listagem</a></li>
                 <li><a href="{{-- URL::action('VisitController@create') --}}"><i class="fa fa-btn fa-plus"></i>Registrar</a></li>
            </ul>
@@ -65,7 +67,9 @@
 
     <!-- JavaScripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
-    <script type="text/javascript" src="{{ URL::asset('js/app.js') }}"></script>
+    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="{{ URL::asset('js/data.js') }}"></script>
+    <!-- <script type="text/javascript" src="{{ URL::asset('js/app.js') }}"></script> -->
     <script type="text/javascript" src="{{ URL::asset('js/gaintime.min.js') }}"></script>
 
     @yield('scripts')

@@ -4,7 +4,7 @@
 $factory->define(App\Visit::class, function (Faker\Generator $faker) {
 
     return [
-        'date' => $faker->date($format = 'Y-m-d', $max = 'now'),
+        'date' => $faker->dateTimeThisYear($max = 'now', $timezone = date_default_timezone_get())->format('Y-m-d'),
         'hour' => $faker->time($format = 'H:i:s', $max = 'now') ,
         'occurrence_type' => $faker->numberBetween($min = 1, $max = 5),
         'referrals' => $faker->realText($maxNbChars = 200, $indexSize = 2),

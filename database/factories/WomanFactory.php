@@ -11,7 +11,7 @@ $factory->define(App\Woman::class, function (Faker\Generator $faker) {
         'phone' => $faker->cellphoneNumber,
         'meeting_address' => $faker->streetName,
         'meeting_reference_point' => $faker->streetName,
-        'meeting_neighborhood' => $faker->randomElement($array = array ('Campo Grande, Salvador','Iguatemi, Salvador','Itaigara, Salvador', 'Avenida Adhemar de Barros, Salvador', 'Pituba, Salvador', 'Avenia Heitor Dias, Salvador')),
+        'meeting_neighborhood' => $faker->randomElement($array = array ('Campo Grande, Salvador','Iguatemi, Salvador','Itaigara, Salvador', 'Avenida Adhemar de Barros, Salvador', 'Pituba, Salvador', 'Avenida Heitor Dias, Salvador')),
         'best_meeting_time' => $faker->numberBetween($min = 1000, $max = 9000),
         'marital_status' => $faker->randomElement($array = array ('casada','solteira','divorciada')),
         'children_amount' => $faker->randomDigit,

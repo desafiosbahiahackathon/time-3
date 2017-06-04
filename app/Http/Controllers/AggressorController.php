@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\User;
+use App\Aggressor;
 use Illuminate\Http\Request;
 
-class UserController extends Controller
+class AggressorController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,9 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::paginate(20);
+        $aggressors = Aggressor::paginate(20);
 
-        return view('user.index')->with('users', $users);
+        return view('aggressor.index')->with('aggressors', $aggressors);
     }
 
     /**
@@ -26,7 +26,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('user/create');
+        //
     }
 
     /**
@@ -37,20 +37,16 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        if (User::create($request->all())) {
-            return redirect()
-                ->back()
-                ->withSuccess('Usuário criado com sucesso!');
-        }
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\User  $user
+     * @param  \App\Aggressor  $aggressor
      * @return \Illuminate\Http\Response
      */
-    public function show(User $user)
+    public function show(Aggressor $aggressor)
     {
         //
     }
@@ -58,10 +54,10 @@ class UserController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\User  $user
+     * @param  \App\Aggressor  $aggressor
      * @return \Illuminate\Http\Response
      */
-    public function edit(User $user)
+    public function edit(Aggressor $aggressor)
     {
         //
     }
@@ -70,10 +66,10 @@ class UserController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\User  $user
+     * @param  \App\Aggressor  $aggressor
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User $user)
+    public function update(Request $request, Aggressor $aggressor)
     {
         //
     }
@@ -81,10 +77,10 @@ class UserController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\User  $user
+     * @param  \App\Aggressor  $aggressor
      * @return \Illuminate\Http\Response
      */
-    public function destroy(User $user)
+    public function destroy(Aggressor $aggressor)
     {
         //
     }
