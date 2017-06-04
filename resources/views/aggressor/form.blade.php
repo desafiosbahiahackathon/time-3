@@ -31,11 +31,11 @@
                 <div class="col-md-6">
                     {{ Form::select('victim_relationship',
                             [
-                                1 => 'Companheiro/Esposo/Namorado',
-                                2 => 'Ex-companheiro/Ex-esposo/Ex-namorado',
-                                3 => 'Pai/Irmão/Primo',
-                                4 => 'Mãe/Irmã/Prima',
-                                5 => 'Outro(a)s',
+                                'Companheiro/Esposo/Namorado' => 'Companheiro/Esposo/Namorado',
+                                'Ex-companheiro/Ex-esposo/Ex-namorado' => 'Ex-companheiro/Ex-esposo/Ex-namorado',
+                                'Pai/Irmão/Primo' => 'Pai/Irmão/Primo',
+                                'Mãe/Irmã/Prima' => 'Mãe/Irmã/Prima',
+                                'Outro(a)s' => 'Outro(a)s',
                             ],
                             NULL,
                             [
@@ -57,11 +57,11 @@
                 <div class="col-md-6">
                     {{ Form::select('violence_type',
                             [
-                                1 => 'Física',
-                                2 => 'Psicológica',
-                                3 => 'Moral',
-                                4 => 'Sexual',
-                                5 => 'Patrimonial',
+                                'Física' => 'Física',
+                                'Psicológica' => 'Psicológica',
+                                'Moral' => 'Moral',
+                                'Sexual' => 'Sexual',
+                                'Patrimonial' => 'Patrimonial',
                             ],
                             NULL,
                             [
@@ -84,7 +84,7 @@
                     {{ Form::select('relapse',
                             [
                                 1 => 'Sim',
-                                2 => 'Não',
+                                0 => 'Não',
                             ],
                             NULL,
                             [
@@ -118,12 +118,12 @@
                 <div class="col-md-6">
                     {{ Form::select('ethnicity',
                             [
-                                1 => 'Preta',
-                                2 => 'Parda',
-                                3 => 'Branca',
-                                4 => 'Amarela',
-                                5 => 'Indígena',
-                                6 => 'Outra',
+                                'Preta' => 'Preta',
+                                'Parda' => 'Parda',
+                                'Branca' => 'Branca',
+                                'Amarela' => 'Amarela',
+                                'Indígena' => 'Indígena',
+                                'Outra' => 'Outra',
                             ],
                             NULL,
                             [
@@ -145,11 +145,11 @@
                 <div class="col-md-6">
                     {{ Form::select('relationship_time',
                             [
-                                1 => '0 a 2 anos',
-                                2 => '3 a 5 anos',
-                                3 => '6 a 9 anos',
-                                4 => 'Acima de 10 anos',
-                                5 => 'Outro',
+                                '0 a 2 anos' => '0 a 2 anos',
+                                '3 a 5 anos' => '3 a 5 anos',
+                                '6 a 9 anos' => '6 a 9 anos',
+                                'Acima de 10 anos' => 'Acima de 10 anos',
+                                'Outro' => 'Outro',
                             ],
                             NULL,
                             [
@@ -172,7 +172,7 @@
                     {{ Form::select('violence_habits',
                             [
                                 1 => 'Sim',
-                                2 => 'Não',
+                                0 => 'Não',
                             ],
                             NULL,
                             [
@@ -206,12 +206,12 @@
                 <div class="col-md-6">
                     {{ Form::select('enrollment',
                             [
-                                1 => 'Não escolarizada',
-                                2 => 'Fundamental I',
-                                3 => 'Fundamental II',
-                                4 => 'Ensino Médio',
-                                5 => 'Superior',
-                                6 => 'Outros',
+                                'Não escolarizada' => 'Não escolarizada',
+                                'Fundamental I' => 'Fundamental I',
+                                'Fundamental II' => 'Fundamental II',
+                                'Ensino Médio' => 'Ensino Médio',
+                                'Superior' => 'Superior',
+                                'Outros' => 'Outros',
                             ],
                             NULL,
                             [

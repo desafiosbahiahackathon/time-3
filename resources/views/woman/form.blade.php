@@ -311,7 +311,7 @@
                     {{ Form::select('work_active',
                             [
                                 1 => 'Sim',
-                                2 => 'Não',
+                                0 => 'Não',
                             ],
                             NULL,
                             [
