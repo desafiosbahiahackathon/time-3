@@ -13,6 +13,7 @@
 
 Route::post('women/download','WomanController@download');
 Route::post('women/modifyRange', 'WomanController@modifyRange');
+Route::post('route/generate', 'VisitController@download');
 
 Route::get('/', function () {
     return view('welcome');

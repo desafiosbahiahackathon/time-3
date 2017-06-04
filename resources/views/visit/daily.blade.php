@@ -3,6 +3,11 @@
 @section('content')
     <div class="container">
         <h3>Assistidas</h3>
+        {{ Form::open(['url' => 'route/generate', 'class' => 'form-horizontal']) }}
+        <button id="pdf-download" name="content" value="" class="btn btn-default btn-primary" type="submit">
+            <span class="fa fa-download" aria-hidden="true"></span> Gerar Rotas
+        </button>
+        {{ Form::close() }}
         <table class="gt-table striped hovered">
             <thead>
                 <th>MPU da assistida</th>
@@ -21,10 +26,6 @@
                 @endforeach
             </tbody>
         </table>
-        <div class="btn danger">
-            <span>Gerar rota</span>
-        </div>
-
     </div>
 @endsection
 

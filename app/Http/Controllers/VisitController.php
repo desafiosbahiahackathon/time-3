@@ -9,6 +9,8 @@ use App\Aggressor;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+use Dompdf\Dompdf;
+use Dompdf\Options;
 
 class VisitController extends Controller
 {
@@ -51,6 +53,10 @@ class VisitController extends Controller
             $mapsURL .= $visits[$i]->meeting_neighborhood . "|";
         }
         $mapsURL .= "&key=AIzaSyDsARP9xoHf3uMnUMKcrgMKNBlpvJd6ODE";
+
+        // dd($mapsURL);
+        // $req = Request::create($mapsURL, 'GET');
+        // dd($req->all());
 
         // dd($mapsURL);
 
@@ -150,5 +156,64 @@ class VisitController extends Controller
     public function destroy(Visit $visit)
     {
         //
+    }
+
+    public function download(Request $request) {
+        $style = '<style>
+            table {
+                width: 100%;
+                border-collapse: separate;
+                border-spacing: 0;
+            }
+
+            td, th {
+                border: 1px solid #ddd;
+                padding: 8px 10px;
+                line-height: 1.42857143;
+                vertical-align: top;
+                text-align: center;
+            }
+
+            tr {
+                background-color: #ffffff;
+            }
+
+            tr:nth-of-type(2n+1) {
+                background-color: #f9f9f9;
+            }
+        </style>';
+
+        $layoutStart = '
+            <h1>Relatório</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="sorting_desc">Número MPU</th>
+                        <th>Assistida</th>
+                        <th>Data da última visita</th>
+                        <th>Endereço de visita</th>
+                    </tr>
+                </thead>
+                <tbody>
+        ';
+        $layoutEnd = '</tbody></table>';
+
+        $content = $style.$layoutStart.$request->content.$layoutEnd;
+
+        $options = new Options();
+        $options->set('defaultFont', 'Helvetica');
+
+        $dompdf = new Dompdf($options);
+        $dompdf->set_option('isHtml5ParserEnabled', true);
+        $dompdf->loadHtml($content);
+
+        // (Optional) Setup the paper size and orientation
+        $dompdf->setPaper('A4', 'landscape');
+        // Render the HTML as PDF
+        $dompdf->render();
+        // Current DateTime
+        $end = new Carbon(Carbon::now());
+        // Output the generated PDF to Browser
+        return $dompdf->stream('sugestao_de_rotas'.$end->Format('d-m-Y_H-i-s'));
     }
 }
