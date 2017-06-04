@@ -29,5 +29,9 @@ class Aggressor extends Model
 
     protected $guarded = [];
 
-        
+    public function visits()
+    {
+        return $this->hasMany('Visit');
+    }
+
 }

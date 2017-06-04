@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Woman;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class WomanController extends Controller
@@ -14,7 +15,12 @@ class WomanController extends Controller
      */
     public function index()
     {
-        //
+        $begin = new Carbon('4 weeks ago');
+        $end = new Carbon(Carbon::now()->addYears(1));
+
+        $women = self::getByRange($begin, $end);
+
+        return view('woman.index')->with('women', $women);
     }
 
     /**
@@ -24,7 +30,7 @@ class WomanController extends Controller
      */
     public function create()
     {
-        return view('woman/create');
+        return view('woman.create');
     }
 
     /**
@@ -86,4 +92,39 @@ class WomanController extends Controller
     {
         //
     }
+
+    public function scopeBetween($query, Carbon $from, Carbon $to)
+    {
+        $query->whereDate('date', '>=', $from);
+        $query->whereDate('date', '<', $to);
+    }
+
+    public function modifyRange(Request $request) {
+        $begin = new Carbon(str_replace('/', '-',$request->begin));
+        $end = new Carbon(str_replace('/', '-',$request->end));
+
+        $reports = Woman::getByRange($begin, $end);
+
+        return view('woman.index')
+            ->withReports($reports)
+            ->withBegin($begin->Format('d/m/Y'))
+            ->withEnd($end->Format('d/m/Y'));
+    }
+    //
+    // public function getDateAttribute()
+    // {
+    //     $carbon = Carbon::createFromFormat('Y-m-d', $this->attributes['day']);
+    //     return $carbon->format('d/m/Y');
+    // }
+    //
+    public static function getByRange($begin, $end) {
+        $women = Woman::paginate(20);
+        return $women;
+    }
+    //
+    // public function setDateAttribute($value)
+    // {
+    //     $carbon = Carbon::createFromFormat('d/m/Y', $value);
+    //     $this->attributes['day'] = $carbon->format('Y-m-d');
+    // }
 }

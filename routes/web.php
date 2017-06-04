@@ -11,9 +11,14 @@
 |
 */
 
+Route::post('women/download','WomanController@download');
+Route::post('women/modifyRange', 'WomanController@modifyRange');
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('visit/dailyVisits','VisitController@dailyVisits');
 
 Route::resource('user','UserController');
 Route::resource('woman','WomanController');

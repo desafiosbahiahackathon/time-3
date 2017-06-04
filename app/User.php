@@ -33,4 +33,9 @@ class User extends Model
         'maj' => 3,
     ];
 
+    public function visits()
+    {
+        return $this->hasMany('Visit');
+    }
+
 }

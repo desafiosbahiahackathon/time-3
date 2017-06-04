@@ -2,36 +2,31 @@
 
 @section('content')
     <div class="container">
-        <h3>Usuários</h3>
-        <div class="pagination">{{$users->links()}}</div>
-        <table class="table table-striped table-bordered">
+        <h3>Assistidas</h3>
+        {{ Form::open(['url' => 'women.download', 'class' => 'form-horizontal']) }}
+        <button id="pdf-download" name="content" value="" class="btn btn-default btn-primary" type="submit">
+            <span class="fa fa-download" aria-hidden="true"></span> Download
+        </button>
+        {{ Form::close() }}
+        <table class="gt-table striped hovered">
             <thead>
-                <th>Usuário</th>
-                <th>Email</th>
-                <th style="width: 30%">Ações</th>
+                <th class="sorting_desc">Número MPU</th>
+                <th>Assistida</th>
+                <th>Idade</th>
+                <th>Endereço de visita</th>
             </thead>
             <tbody>
-                @foreach ($users as $user)
-                    <tr data-user-id="{{$user->id}}">
-                        <td style="vertical-align: middle;" class="this-name">{{$user->name}}</td>
-                        <td style="vertical-align: middle;" class="user-email">{{$user->email}}</td>
-                        <td style="vertical-align: middle;" class="user-actions">
-                            @if (Auth::user()->isManager())
-                                {{ Form::model($user, ['method' => 'DELETE', 'route' => ['user.destroy', $user->id], 'class'=>'form-horizontal user-delete']) }}
-                                    <a class="btn btn-default" href="{{action('UserController@edit', array('id' => $user->id))}}">
-                                        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Editar
-                                    </a>
-                                    <button class="btn btn-default btn-danger delete" type="submit">
-                                        <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Excluir
-                                    </button>
-                                {{ Form::close() }}
-                            @endif
-                        </td>
+                @foreach ($women as $woman)
+                    <tr data-user-id="{{$woman->id}}">
+                        <td class="this-name sorting_1">{{$woman->mpu_number}}</td>
+                        <td class="this-name">{{$woman->name}}</td>
+                        <td class="this-name">{{$woman->age}}</td>
+                        <td class="this-name">{{$woman->meeting_neighborhood}}</td>
                     </tr>
                 @endforeach
             </tbody>
         </table>
-        <div class="pagination">{{$users->links()}}</div>
+        <!-- <div class="pagination">{{$women->links()}}</div> -->
     </div>
 @endsection
 

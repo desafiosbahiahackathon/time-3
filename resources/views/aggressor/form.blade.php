@@ -25,7 +25,6 @@
         	        @endif
                 </div>
             </div>
-
             <div class="form-group aggressor-group {{ $errors->has('victim_relationship') ? ' has-error' : '' }}">
                 {{ Form::label('victim_relationship', 'Qual o grau de proximidade entre você e quem praticou à violência? (*Flexionar gênero, se necessário)', array('class' => 'col-md-4 control-label')) }}
                 <div class="col-md-6">
@@ -112,7 +111,6 @@
                         @endif
                 </div>
             </div>
-
             <div class="form-group aggressor-group {{ $errors->has('ethnicity') ? ' has-error' : '' }}">
                 {{ Form::label('ethnicity', 'Raça/Etnia (Autodeclaração)', array('class' => 'col-md-4 control-label')) }}
                 <div class="col-md-6">
@@ -164,7 +162,7 @@
                         </span>
                     @endif
                 </div>
-            </div> 
+            </div>
 
             <div class="form-group aggressor-group {{ $errors->has('violence_habits') ? ' has-error' : '' }}">
                 {{ Form::label('violence_habits', 'O(a) agressor(a) costuma ser violento(a) com outras pessoas?', array('class' => 'col-md-4 control-label')) }}
@@ -220,6 +218,7 @@
                             ]
                         )
                     }}
+
                     @if ($errors->has('enrollment'))
                         <span class="help-block">
                             <strong>{{ $errors->first('enrollment') }}</strong>
@@ -238,7 +237,7 @@
                             </span>
                         @endif
                 </div>
-            </div>           
+            </div>
 
             <div class="form-group">
                 <div class="col-md-6 col-md-offset-4">

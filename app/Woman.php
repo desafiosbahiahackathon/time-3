@@ -2,6 +2,8 @@
 
 namespace App;
 
+use App\Visit;
+
 use Illuminate\Database\Eloquent\Model;
 
 /**
@@ -43,5 +45,9 @@ class Woman extends Model
 
     protected $guarded = [];
 
-        
+    public function visits()
+    {
+        return $this->hasMany('App\Visit');
+    }
+
 }

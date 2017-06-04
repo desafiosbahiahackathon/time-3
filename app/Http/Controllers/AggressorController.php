@@ -14,7 +14,9 @@ class AggressorController extends Controller
      */
     public function index()
     {
-        //
+        $aggressors = Aggressor::paginate(20);
+
+        return view('aggressor.index')->with('aggressors', $aggressors);
     }
 
     /**

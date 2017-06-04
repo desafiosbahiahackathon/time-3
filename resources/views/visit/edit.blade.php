@@ -23,7 +23,3 @@
         </div>
     @endif
 @endsection
-
-@section('scripts')
-    <script type="text/javascript" src="{{ URL::asset('js/user.js') }}"></script>
-@endsection
