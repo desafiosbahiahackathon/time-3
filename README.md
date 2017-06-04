@@ -1,6 +1,21 @@
 redesigned-couscous
 ========
 
+Projeto criado na Hackathon Salvador 2017 - Respeita as Minas.
+
+Equipe
+----------
+- Adeilson Silva;
+- Caroline Ferraz;
+- Juliana Luz;
+- Neyde Karen.
+
+-------------
+-------------
+
+Dicas
+-------------
+
 Instalação
 -------------
 
@@ -15,9 +30,3 @@ Migrations e Seeds
 1. Para criar o banco: `mysql < database/create.sql --user=seuusuario -p`
 2. `php artisan migrate:refresh --seed`
 
-Equipe
-----------
-- Neyde Karen;
-- Caroline Ferraz
-- Juliana Luz;
-- Adeilson Silva;
