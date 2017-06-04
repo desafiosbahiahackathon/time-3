@@ -26,7 +26,13 @@ Descrição das Soluções
 
 - Há mapa de rota com as menores distâncias à percorrer pelas viaturas em sua visita diária. Possibilitará a redução do gasto de combustível, otimização do tempo gasto no percurso da ronda e talvez até aumente a quantidade de assistidas acompanhadas em cada ronda.
 
+
+Tecnologias utilizadas
 -------------
+
+- [Laravel Framework](https://laravel.com/)
+- [GainTime](https://gaintime.github.io/)
+
 -------------
 
 Dicas
@@ -34,11 +40,11 @@ Dicas
 
 Instalação
 -------------
+Após a clonagem do repositório:
 
 1. `composer install`
 2. `cp .env.example .env`
 3. `php artisan key:generate`
-4. `php artisan serve`
 
 Migrations e Seeds
 --------------
@@ -46,3 +52,7 @@ Migrations e Seeds
 1. Para criar o banco: `mysql < database/create.sql --user=seuusuario -p`
 2. `php artisan migrate:refresh --seed`
 
+Rodar a aplicação
+--------------
+
+1. `php artisan serve`
