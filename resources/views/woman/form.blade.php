@@ -115,8 +115,8 @@
                 <div class="col-md-6">
                     {{ Form::select('best_meeting_time',
                             [
-                                1 => 'Matutino',
-                                2 => 'Vespertino',
+                                'Matutino' => 'Matutino',
+                                'Vespertino' => 'Vespertino',
                             ],
                             NULL,
                             [
@@ -137,12 +137,12 @@
                 <div class="col-md-6">
                     {{ Form::select('marital_status',
                             [
-                                1 => 'Casada/união Estável',
-                                2 => 'Divorciada',
-                                3 => 'Separada',
-                                4 => 'Solteira',
-                                5 => 'Viúva',
-                                6 => 'Outro',
+                                'Casada/união Estável' => 'Casada/união Estável',
+                                'Divorciada' => 'Divorciada',
+                                'Separada' => 'Separada',
+                                'Solteira' => 'Solteira',
+                                'Viúva' => 'Viúva',
+                                'Outro' => 'Outro',
                             ],
                             NULL,
                             [
@@ -189,18 +189,18 @@
                 <div class="col-md-6">
                     {{ Form::select('enrollment',
                             [
-                                1 => 'Não escolarizada',
-                                2 => 'Fundamental I incompleto',
-                                3 => 'Fundamental I completo',
-                                4 => 'Fundamental II incompleto',
-                                5 => 'Fundamental II completo',
-                                6 => 'Ensino Médio incompleto',
-                                7 => 'Ensino Médio completo',
-                                8 => 'Graduação incompleta',
-                                9 => 'Graduação completa',
-                                10 => 'Pós Graduação incompleta',
-                                11 => 'Pós Graduação completa',
-                                12 => 'Outros',
+                                'Não escolarizada' => 'Não escolarizada',
+                                'Fundamental I incompleto' => 'Fundamental I incompleto',
+                                'Fundamental I completo' => 'Fundamental I completo',
+                                'Fundamental II incompleto' => 'Fundamental II incompleto',
+                                'Fundamental II completo' => 'Fundamental II completo',
+                                'Ensino Médio incompleto' => 'Ensino Médio incompleto',
+                                'Ensino Médio completo' => 'Ensino Médio completo',
+                                'Graduação incompleta' => 'Graduação incompleta',
+                                'Graduação completa' => 'Graduação completa',
+                                'Pós Graduação incompleta' => 'Pós Graduação incompleta',
+                                'Pós Graduação completa' => 'Pós Graduação completa',
+                                'Outros' => 'Outros',
                             ],
                             NULL,
                             [
@@ -221,12 +221,12 @@
                 <div class="col-md-6">
                     {{ Form::select('ethnicity',
                             [
-                                1 => 'Preta',
-                                2 => 'Parda',
-                                3 => 'Branca',
-                                4 => 'Amarela',
-                                5 => 'Indígena',
-                                6 => 'Outra',
+                                'Preta' => 'Preta',
+                                'Parda' => 'Parda',
+                                'Branca' => 'Branca',
+                                'Amarela' => 'Amarela',
+                                'Indígena' => 'Indígena',
+                                'Outra' => 'Outra',
                             ],
                             NULL,
                             [
@@ -260,11 +260,11 @@
                 <div class="col-md-6">
                     {{ Form::select('religion',
                             [
-                                1 => 'Católica',
-                                2 => 'Evangélica/Protestante',
-                                3 => 'Espírita',
-                                4 => 'Matriz Africana',
-                                5 => 'Outros',
+                                'Católica' => 'Católica',
+                                'Evangélica/Protestante' => 'Evangélica/Protestante',
+                                'Espírita' => 'Espírita',
+                                'Matriz Africana' => 'Matriz Africana',
+                                'Outros' => 'Outros',
                             ],
                             NULL,
                             [
@@ -344,12 +344,12 @@
                 <div class="col-md-6">
                     {{ Form::select('income',
                             [
-                                1 => 'NR',
-                                2 => 'SR',
-                                3 => 'Até 01 SM',
-                                4 => '02 a 04 SM',
-                                5 => 'Acima de 05 SM',
-                                6 => 'Outra',
+                                'NR' => 'NR',
+                                'SR' => 'SR',
+                                'Até 01 SM' => 'Até 01 SM',
+                                '02 a 04 SM' => '02 a 04 SM',
+                                'Acima de 05 SM' => 'Acima de 05 SM',
+                                'Outra' => 'Outra',
                             ],
                             NULL,
                             [
@@ -370,9 +370,9 @@
                 <div class="col-md-6">
                     {{ Form::select('main_income_family',
                             [
-                                1 => 'A própria',
-                                2 => 'O(a) Agressor(a)',
-                                3 => 'Outro(a) membro(a) da familiar',
+                                'A própria' => 'A própria',
+                                'O(a) Agressor(a)' => 'O(a) Agressor(a)',
+                                'Outro(a) membro(a) da familiar' => 'Outro(a) membro(a) da familiar',
                             ],
                             NULL,
                             [
@@ -393,11 +393,11 @@
                 <div class="col-md-6">
                     {{ Form::select('social_government_program',
                             [
-                                1 => 'Programa Bolsa Família - PBF',
-                                2 => 'Programa Minha Casa, Minha Vida',
-                                3 => 'Benefício de Prestação Continuada - BPC',
-                                4 => 'Programa Primeiro Passo',
-                                5 => 'Outro(s)',
+                                'Programa Bolsa Família - PBF' => 'Programa Bolsa Família - PBF',
+                                'Programa Minha Casa, Minha Vida' => 'Programa Minha Casa, Minha Vida',
+                                'Benefício de Prestação Continuada - BPC' => 'Benefício de Prestação Continuada - BPC',
+                                'Programa Primeiro Passo' => 'Programa Primeiro Passo',
+                                'Outro(s)' => 'Outro(s)',
                             ],
                             NULL,
                             [
@@ -430,11 +430,11 @@
                 <div class="col-md-6">
                     {{ Form::select('request_origin',
                             [
-                                1 => 'TJ _Vara',
-                                2 => 'MP',
-                                3 => 'DP',
-                                4 => 'DEAM',
-                                5 => 'Outro(s)',
+                                'TJ _Vara' => 'TJ _Vara',
+                                'MP' => 'MP',
+                                'DP' => 'DP',
+                                'DEAM' => 'DEAM',
+                                'Outro(s)' => 'Outro(s)',
                             ],
                             NULL,
                             [
