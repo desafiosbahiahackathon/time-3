@@ -27,7 +27,7 @@
             </div>
 
             <div class="form-group aggressor-group {{ $errors->has('victim_relationship') ? ' has-error' : '' }}">
-                {{ Form::label('victim_relationship', 'Qual o grau de proximidade entre você e quem praticou à violência?', array('class' => 'col-md-4 control-label')) }}
+                {{ Form::label('victim_relationship', 'Qual o grau de proximidade entre você e quem praticou à violência? (*Flexionar gênero, se necessário)', array('class' => 'col-md-4 control-label')) }}
                 <div class="col-md-6">
                     {{ Form::select('victim_relationship',
                             [
