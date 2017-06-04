@@ -14,44 +14,25 @@
 </head>
 <body id="app-layout">
     <nav class="navbar navbar-default navbar-static-top">
-        <div class="container">
-            <div class="navbar-header">
+       <div class="navbar-header">
+           <!-- Branding Image -->
+           <a class="navbar-brand" href="{{ url('/') }}">
+               redesigned-couscous
+           </a>
+       </div>
 
-                <!-- Collapsed Hamburger -->
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                    <span class="sr-only">Alternar Navegação</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-
-                <!-- Branding Image -->
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    redesigned-couscous
-                </a>
-            </div>
-
-            <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                <!-- Left Side Of Navbar -->
-                <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/home') }}">Início</a></li>
-                        <li class="dropdown-right">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                Acolhimento 
-                            </a>
-
-                            <ul class="dropdown-menu" role="menu">
-                                    <li> aaa </li>
-                                {{-- <li><a href="{{ URL::action('WomenController@create') }}"><i class="fa fa-btn fa-plus"></i>Registrar Novo</a></li> --}}
-                            </ul>
-                        </li>
-                </ul>
-
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="{{ url('/login') }}">Login</a></li>
-                </ul>
-            </div>
-        </div>
+       <div class="dropdown-right">
+           <!-- Left Side Of Navbar -->
+            <span>Acolhimento</span>
+           <ul>
+               <li>
+                   <a href="#">
+                       aaa 
+                   </a>
+                    {{-- <li><a href="{{ URL::action('WomenController@create') }}"><i class="fa fa-btn fa-plus"></i>Registrar Novo</a></li> --}}
+               </li>
+           </ul>
+       </div>
     </nav>
 
     <div class="container">
@@ -73,8 +54,9 @@
     @yield('content')
 
     <!-- JavaScripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" integrity="sha384-I6F5OKECLVtK/BL+8iSLDEHowSAfUo76ZL9+kGAgTRdiByINKJaqTPH/QVNS1VDb" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
     <script type="text/javascript" src="{{ URL::asset('js/app.js') }}"></script>
+    <script type="text/javascript" src="{{ URL::asset('js/gaintime.min.js') }}"></script>
 
     @yield('scripts')
 </body>
