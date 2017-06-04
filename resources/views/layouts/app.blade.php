@@ -23,13 +23,10 @@
 
        <div class="dropdown-right">
            <!-- Left Side Of Navbar -->
-            <span>Acolhimento</span>
+            <span>Policial</span>
            <ul>
                <li>
-                   <a href="#">
-                       aaa 
-                   </a>
-                    {{-- <li><a href="{{ URL::action('WomenController@create') }}"><i class="fa fa-btn fa-plus"></i>Registrar Novo</a></li> --}}
+                    <li><a href="{{ URL::action('UserController@create') }}"><i class="fa fa-btn fa-plus"></i>Registrar Novo</a></li>
                </li>
            </ul>
        </div>
