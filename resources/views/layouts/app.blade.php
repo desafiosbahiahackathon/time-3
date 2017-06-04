@@ -21,14 +21,27 @@
            </a>
        </div>
 
-       <div class="dropdown-right">
-           <!-- Left Side Of Navbar -->
-            <span>Policial</span>
+       <div class="btn dropdown-right">
+           <span>Efetivo</span>
            <ul>
-               <li>
-                    <li><a href="{{ URL::action('UserController@create') }}"><i class="fa fa-btn fa-plus"></i>Registrar Novo</a></li>
-               </li>
+                <li><a href="{{ URL::action('UserController@index') }}"><i class="fa fa-btn fa-plus"></i>Listagem</a></li>
+                <li><a href="{{ URL::action('UserController@create') }}"><i class="fa fa-btn fa-plus"></i>Registrar</a></li>
            </ul>
+       </div>
+       <div class="btn dropdown-right">
+           <span>Assistidas</span>
+           <ul>
+                <li><a href="{{ URL::action('WomanController@index') }}"><i class="fa fa-btn fa-plus"></i>Listagem</a></li>
+                <li><a href="{{ URL::action('WomanController@create') }}"><i class="fa fa-btn fa-plus"></i>Registrar</a></li>
+           </ul>
+       </div>
+       <div class="btn dropdown-right">
+           <span>Visitas</span>
+           <ul>
+                <li><a href="{{ URL::action('VisitController@index') }}"><i class="fa fa-btn fa-plus"></i>Listagem</a></li>
+                <li><a href="{{-- URL::action('VisitController@create') --}}"><i class="fa fa-btn fa-plus"></i>Registrar</a></li>
+           </ul>
+       </div>
        </div>
     </nav>
 

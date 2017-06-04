@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Woman;
+use App\Visit;
 use Illuminate\Http\Request;
 
-class WomanController extends Controller
+class VisitController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,7 @@ class WomanController extends Controller
      */
     public function index()
     {
-        $women = Woman::paginate(20);
-
-        return view('woman.index')->with('women', $women);
+        //
     }
 
     /**
@@ -26,7 +24,7 @@ class WomanController extends Controller
      */
     public function create()
     {
-        return view('woman.create');
+        //
     }
 
     /**
@@ -37,20 +35,16 @@ class WomanController extends Controller
      */
     public function store(Request $request)
     {
-        if (Woman::create($request->all())) {
-            return redirect()
-                ->back()
-                ->withSuccess('Assistida adicionada com sucesso!');
-        }
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Woman  $woman
+     * @param  \App\Visit  $visit
      * @return \Illuminate\Http\Response
      */
-    public function show(Woman $woman)
+    public function show(Visit $visit)
     {
         //
     }
@@ -58,10 +52,10 @@ class WomanController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Woman  $woman
+     * @param  \App\Visit  $visit
      * @return \Illuminate\Http\Response
      */
-    public function edit(Woman $woman)
+    public function edit(Visit $visit)
     {
         //
     }
@@ -70,10 +64,10 @@ class WomanController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Woman  $woman
+     * @param  \App\Visit  $visit
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Woman $woman)
+    public function update(Request $request, Visit $visit)
     {
         //
     }
@@ -81,10 +75,10 @@ class WomanController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Woman  $woman
+     * @param  \App\Visit  $visit
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Woman $woman)
+    public function destroy(Visit $visit)
     {
         //
     }

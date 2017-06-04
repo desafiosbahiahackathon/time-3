@@ -17,3 +17,5 @@ Route::get('/', function () {
 
 Route::resource('user','UserController');
 Route::resource('woman','WomanController');
+Route::resource('visit','VisitController');
+Route::resource('aggressor','AggressorController');
