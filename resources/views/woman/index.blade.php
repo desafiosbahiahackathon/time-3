@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <h3>Assistidas</h3>
-        {{ Form::open(['url' => 'women.download', 'class' => 'form-horizontal']) }}
+        {{ Form::open(['url' => 'women/download', 'class' => 'form-horizontal']) }}
         <button id="pdf-download" name="content" value="" class="btn btn-default btn-primary" type="submit">
             <span class="fa fa-download" aria-hidden="true"></span> Download
         </button>

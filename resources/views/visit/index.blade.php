@@ -3,7 +3,6 @@
 @section('content')
     <div class="container">
         <h3>Assistidas</h3>
-        <div class="pagination">{{ $visits->links() }}</div>
         <table class="gt-table striped hovered">
             <thead>
                 <th>MPU da assistida</th>
@@ -22,7 +21,6 @@
                 @endforeach
             </tbody>
         </table>
-        <div class="pagination">{{$visits->links()}}</div>
     </div>
 @endsection
 

@@ -41,7 +41,7 @@
            <ul>
                 <li><a href="{{ URL::action('VisitController@dailyVisits') }}"><i class="fa fa-btn fa-plus"></i>Visitas do dia</a></li>
                 <li><a href="{{ URL::action('VisitController@index') }}"><i class="fa fa-btn fa-plus"></i>Listagem</a></li>
-                <li><a href="{{-- URL::action('VisitController@create') --}}"><i class="fa fa-btn fa-plus"></i>Registrar</a></li>
+                <li><a href="{{ URL::action('VisitController@create') }}"><i class="fa fa-btn fa-plus"></i>Registrar</a></li>
            </ul>
        </div>
        </div>
