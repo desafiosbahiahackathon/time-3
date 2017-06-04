@@ -3,10 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Visit;
+use App\User;
 use App\Woman;
+use App\Aggressor;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
-
 use Illuminate\Http\Request;
 
 class VisitController extends Controller
@@ -81,7 +82,14 @@ class VisitController extends Controller
      */
     public function create()
     {
-        //
+        $users = User::pluck('name', 'id');
+        $woman = Woman::pluck('name', 'id');
+        $aggressor = Aggressor::pluck('name', 'id');
+
+        return view('visit/create')
+                ->withUsers($users)
+                ->withWoman($woman)
+                ->withAggressor($aggressor);
     }
 
     /**
@@ -92,7 +100,11 @@ class VisitController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if (Visit::create($request->all())) {
+            return redirect()
+                ->back()
+                ->withSuccess('Visita adicionada com sucesso!');
+        }
     }
 
     /**

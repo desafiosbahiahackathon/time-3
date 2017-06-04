@@ -26,7 +26,7 @@ class AggressorController extends Controller
      */
     public function create()
     {
-        //
+        return view('aggressor.create');
     }
 
     /**
@@ -37,7 +37,11 @@ class AggressorController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if (Aggressor::create($request->all())) {
+            return redirect()
+                ->back()
+                ->withSuccess('Agressor criado com sucesso!');
+        }
     }
 
     /**

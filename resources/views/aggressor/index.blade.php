@@ -22,7 +22,7 @@
                 @endforeach
             </tbody>
         </table>
-        <div class="pagination">{{$women->links()}}</div>
+        <div class="pagination">{{$users->links()}}</div>
     </div>
 @endsection
 
